@@ -1,46 +1,143 @@
 @import './src/colors.scss';
 
-
 .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; 
-  background-color: $fondo;
-}
-
-.imagen-gon {
-  border-radius: 50px;
-  height: 300px;
-  margin-bottom: 13px;
-  opacity: 0.85; 
-}
-
-.redes-container {
-  display: flex;
-  flex-direction:row;
-  align-items: center;
-  opacity: 0.8; 
-}
-
-.redes-icono {
-  margin-right: 13px; 
-}
-  
-.redes-container a{
-  color: $white;
-}
- 
-.content-container {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+ 
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+  .content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    .inicio-image {
+      img {
+        border-radius: 50px;
+        height: 300px;
+        margin-bottom: 13px;
+        opacity: 0.85;
+      }
+    }
+
+    .redes-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      opacity: 0.8;
+
+      .redes-icono {
+        margin-right: 13px;
+
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        font-size: 23px;
+        padding: 0 50px;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  // Media query para pantalla móvil
+  @media (max-width: 768px) {
+    .navbar {
+      .nav-links {
+        display: none; // Ocultar las opciones del navbar en pantalla móvil
+      }
+
+      .burger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+
+        .line {
+          width: 25px;
+          height: 3px;
+          background-color: $white;
+          margin: 5px;
+          transition: all 0.3s ease;
+        }
+
+        // Estilos para la animación del botón burger en modo desplegable
+        &.active {
+          .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+          }
+
+          .line2 {
+            opacity: 0;
+          }
+
+          .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+          }
+        }
+      }
+
+      // Estilos para el desplegable del navbar en modo móvil
+      &.active {
+        background-color: $white;
+        .nav-links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          padding: 20px;
+
+          li {
+            padding: 10px 0;
+          }
+          a {
+            color: $white; // Cambiar el color del texto del desplegable
+          }
+        }
+      }
+    }
+  }
 }
