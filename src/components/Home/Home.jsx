@@ -12,6 +12,7 @@ import './Home.scss';
 
 const Home = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -35,6 +36,7 @@ const Home = () => {
             <li>
               <Link to='/about'>Sobre mí</Link>
             </li>
+          
             <li>
               <Link to='/contacto'>Contacto</Link>
             </li>

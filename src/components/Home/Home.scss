@@ -8,32 +8,26 @@
     opacity: 1;
   }
 }
+
 @keyframes slide-in-right {
   from {
     opacity: 0;
     transform: translateX(-700px);
   }
   to {
-    opacity: 1;
+    opacity: 0.8;
     transform: translateX(0);
   }
 }
+
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(330px);
+    transform: translateY(400px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-  from {
-    opacity: 0;
-    transform: translateY(330px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -47,7 +41,6 @@
   height: 100vh;
   overflow: hidden;
  
-
   video {
     position: absolute;
     top: 50%;
@@ -71,10 +64,10 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
- .nombre{
-  animation: slide-in-left 1.5s ease-in-out;
- }
 
+    .nombre {
+      animation: slide-in-left 1.5s ease-in-out;
+    }
 
     .inicio-image {
       img {
@@ -82,7 +75,12 @@
         height: 300px;
         margin-bottom: 13px;
         opacity: 0.85;
-        animation: slide-in-right 2s ease-in-out;
+        animation: slide-in-right 1.8s ease-in-out;
+        transition: transform 2s ease;
+      }
+
+      img:hover {
+        transform: rotate(-40deg) translateX(1000px);
       }
     }
 
@@ -91,13 +89,15 @@
       flex-direction: row;
       align-items: center;
       opacity: 0.8;
-      
 
       .redes-icono {
         margin-right: 13px;
 
         a {
           color: $white;
+        }
+        a:hover{
+          color: $blue;
         }
       }
     }
@@ -108,7 +108,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    
 
     .nav-links {
       display: flex;
@@ -116,15 +115,16 @@
       list-style: none;
 
       li {
-        font-size: 23px;
-        padding: 0 50px;
+        font-size: 25px;
 
         a {
           color: $white;
           text-decoration: none;
         }
+        a:hover{
+          border-bottom: 1px solid $blue;
+        }
       }
     }
   }
-
 }
