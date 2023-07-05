@@ -33,7 +33,7 @@ const Home = () => {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/sobre-mi'>Sobre mí</Link>
+              <Link to='/about'>Sobre mí</Link>
             </li>
             <li>
               <Link to='/contacto'>Contacto</Link>

@@ -1,0 +1,30 @@
+@import './src/colors.scss';
+
+.holi{
+    color: $white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        font-size: 23px;
+        padding: 0 50px;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+}
+
+
