@@ -24,10 +24,10 @@ const Home = () => {
         <source src={burbujasVideo} type="video/mp4" />
       </video>
       <div className="content-container">
-        <img src={naming} alt="title" />
+        <img src={naming} alt="title" className='nombre' />
 
         {/* Navbar */}
-        <nav className='navbar'>
+        <nav className='navbar fade-in-slow'>
           <ul className={`nav-links ${menuVisible ? 'active' : ''}`}>
             <li>
               <Link to='/'>Home</Link>
@@ -47,11 +47,11 @@ const Home = () => {
         </nav>
 
         {/* Resto del contenido */}
-        <div className="inicio-image">
+        <div className="inicio-image slide-in-right">
           <img src={goni} className='imagen-gon' />
         </div>
 
-        <div className="redes-container">
+        <div className="redes-container fade-in-slow">
           <div className="redes-icono">
             <a href="https://www.linkedin.com/in/gonzalo-marti-peirats/" target="_blank">
               <FaLinkedin size={50} />
