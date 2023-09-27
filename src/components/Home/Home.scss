@@ -75,13 +75,10 @@
         height: 300px;
         margin-bottom: 13px;
         opacity: 0.85;
-        animation: slide-in-right 1.8s ease-in-out;
-        transition: transform 2s ease;
+     
       }
 
-      img:hover {
-        transform: rotate(-40deg) translateX(1000px);
-      }
+
     }
 
     .redes-container {
