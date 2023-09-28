@@ -2,7 +2,7 @@ import React, { useState }  from 'react'
 
 import { Link } from 'react-router-dom'; 
 
-
+import foteta from '../../assets/img/goniCambiada.png';
 import './About.scss'
 
 const About = () => {
@@ -35,6 +35,9 @@ const About = () => {
           </div>
         </nav>
 </div>
+<div>
+          <img src={foteta} className='imageneta-gon' />
+        </div>
         </>
 
   )
